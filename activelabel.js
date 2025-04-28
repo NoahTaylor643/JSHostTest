@@ -2,9 +2,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll('.form-field-label').forEach(function(element) {
     element.addEventListener('click', function(event) {
-      console.log('Label clicked:', event.target);
+      console.log('span test');
       element.classList.add('active');
     });
   });  
 
+  document.querySelectorAll('.form-input-wrapper-div').forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      console.log('Div Test');
+      element.classList.add('active');
+    });
+  }); 
+
+  document.querySelectorAll('.form-input-element').forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      console.log('input Test');
+      element.classList.add('active');
+    });
+  }); 
+
+  document.querySelectorAll('.form-input-wrapper-element').forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      console.log('label Test');
+      element.classList.add('active');
+    });
+  }); 
+  
 });
