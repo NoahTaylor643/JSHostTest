@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+window.onload = function () {
 
   document.querySelectorAll('.form-field-label').forEach(function(element) {
     element.addEventListener('click', function(event) {
@@ -28,4 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }); 
   
-});
+};
