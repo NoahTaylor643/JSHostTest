@@ -1,15 +1,21 @@
 
 window.onload = function () {
 
-  document.querySelectorAll('.form-field-label').forEach(function(el) {
+  document.querySelectorAll('.form-input-element').forEach(function(el) {
+    const label = el.closest('label');
+    const span = label.querySelector('span');
 
+    if (el.value) {
+        span.classList.add('active');
+    }
+    
     el.addEventListener('focus', () => {
-      el.classList.add('active');
+      span.classList.add('active');
     });
 
     el.addEventListener('blur', () => {
       if (!el.value) {
-        el.classList.remove('active');
+        span.classList.remove('active');
       }
     });
   });  
