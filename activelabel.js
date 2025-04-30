@@ -1,10 +1,4 @@
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
-}
-
-function init() {
+setTimeout(() => {
   document.querySelectorAll('.form-input-element').forEach(function(el) {
     const label = el.closest('label');
     const span = label.querySelector('span');
@@ -23,7 +17,7 @@ function init() {
       }
     });
   });
-}
+}, 0);
 
 
 
