@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
   document.querySelectorAll('.form-input-element').forEach(function(el) {
     const label = el.closest('label');
     const span = label.querySelector('span');
@@ -17,4 +17,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });  
-});
+};
