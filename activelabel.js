@@ -1,6 +1,4 @@
-
-window.onload = function () {
-
+document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.form-input-element').forEach(function(el) {
     const label = el.closest('label');
     const span = label.querySelector('span');
@@ -19,4 +17,4 @@ window.onload = function () {
       }
     });
   });  
-};
+});
