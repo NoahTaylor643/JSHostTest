@@ -28,3 +28,13 @@ document.body.addEventListener("focusout", function(e) {
     span?.classList.remove("active");
   }
 });
+
+document.querySelectorAll('.submit-button').forEach(button => {
+  button.addEventListener('click', function() {
+    document.querySelectorAll('span').forEach(span => {
+      span.classList.remove('active');
+    });
+  });
+});
+//document.body.addEventListener('click', function() {
+//});
