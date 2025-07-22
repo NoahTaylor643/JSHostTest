@@ -29,7 +29,7 @@ document.body.addEventListener("focusout", function(e) {
   }
 });
 
-document.querySelectorAll('form input').forEach(function(field) {
+document.querySelectorAll('form input, form select, form textarea').forEach(function(field) {
   field.addEventListener('input', function(event) {
     if (this.value === '') {
       const label = this.closest("label");
