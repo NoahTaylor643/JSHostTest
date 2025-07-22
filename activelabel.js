@@ -18,23 +18,10 @@ document.body.addEventListener("focusin", function(e) {
     const label = e.target.closest("label");
     const span = label?.querySelector("span");
     span?.classList.add("active");
-  }
-});
-
-document.body.addEventListener("focusout", function(e) {
-  if (e.target.matches(".form-input-element") && !e.target.value) {
-    const label = e.target.closest("label");
-    const span = label?.querySelector("span");
-    span?.classList.remove("active");
-  }
-});
-
-document.querySelectorAll('form input, form select, form textarea').forEach(function(field) {
-  field.addEventListener('input', function(event) {
-    if (this.value === '') {
-      const label = this.closest("label");
-      const span = label?.querySelector("span");
+  } else if (e.target.matches(".submit-button")) {
+    const spans = document.querySelectorAll('span.global-input-label.active');
+    spans.forEach(span => {
       span?.classList.remove("active");
-    }
-  });
+    });
+  }
 });
