@@ -29,12 +29,14 @@ document.body.addEventListener("focusout", function(e) {
   }
 });
 
-document.querySelectorAll('.submit-button').forEach(button => {
-  button.addEventListener('click', function() {
-    document.querySelectorAll('span').forEach(span => {
-      span.classList.remove('active');
-    });
+document.querySelectorAll('form input').forEach(function(field) {
+  field.addEventListener('input', funciton() {
+    if (this.value === '') {
+        if (e.target.matches(".form-input-element") && !e.target.value) {
+          const label = e.target.closest("label");
+          const span = label?.querySelector("span");
+          span?.classList.remove("active");
+        }
+    }
   });
 });
-//document.body.addEventListener('click', function() {
-//});
