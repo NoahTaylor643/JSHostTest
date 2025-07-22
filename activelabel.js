@@ -30,9 +30,9 @@ document.body.addEventListener("focusout", function(e) {
 });
 
 document.querySelectorAll('form input').forEach(function(field) {
-  field.addEventListener('input', funciton() {
+  field.addEventListener('input', function(event) {
     if (this.value === '') {
-      const label = field.target.closest("label");
+      const label = this.closest("label");
       const span = label?.querySelector("span");
       span?.classList.remove("active");
     }
